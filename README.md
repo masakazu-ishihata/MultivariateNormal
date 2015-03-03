@@ -1,6 +1,9 @@
 # Multivariate Normal
 
-多次元正規分布からのサンプリングをする。
+多次元正規分布からのサンプリングをする。  
+numpy の multivariate_normal では中で SVD を行っており、  
+これが原因で稀に "SVD did not converge" で死ぬ。  
+ホントは SVD ではんくて Cholesky 分解でよいので自分で実装した。
 
 ## 多次元正規分布
 
